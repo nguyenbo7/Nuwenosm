@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--____________________ Swiper CSS ____________________-->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+
+    <!--____________________ CSS Style ____________________-->
+    <link rel="stylesheet" href="style.css">
+
+    <!--____________________ Iconscout.com/unicons [ Icon ]____________________-->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <title>NGUYENOSM</title>
+</head>
+<body>
+    <!--____________________ HEADER ____________________-->
+    <header>
+        <nav>
+            <ul class="nav__links">
+                <li><a href="#about">Artist</a></li>
+                <div class="hor__line"></div>
+                <li><a href="#work">Art Work</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!--____________________ MAIN ____________________-->
+    <main>
+        <section class="home__section">
+            <div class="home__top">
+                <div class="home__info">
+                    <p class="title__big">Nuwenosm</p>
+                    <p class="title__medium">: \artstation\</p>
+                    <p class="text__subtitle">
+                        a place where love and art is one of the other.
+                    </p>
+                    <p class="text__subtitle">
+                        a thought of a non-existence definition of art.
+                    </p>
+                    <p class="text__subtitle">
+                        a collection of the hidden beauties from daily life.
+                    </p>
+                </div>
+    
+                <div class="home__img">
+                    <img class="img__cover" src="https://images.pexels.com/photos/1624630/pexels-photo-1624630.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="">
+                </div>
+            </div>
+    
+            <div class="home__bot">
+                <div class="view__work">
+                    <div class="title__blue">View<br>Collection</div>
+                    <img class="title__arrow" src="img/Arrow 1.png" alt="">
+                </div>
+    
+                <div class="info__work">
+                    <div class="title__small">Web Design</div>
+                    <div class="title__small">App Application</div>
+                    <div class="title__small">Digital Art</div>
+                </div>
+            </div>
+
+            
+        </section>
+
+        <section class="contact__section">
+            <div class="contact__sidebar">
+                <div class="contact__toggle"></div>
+        
+                <div class="contact__info">
+                    <div class="contact__img">
+                        <img 
+                            src="https://images.pexels.com/photos/25758/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
+                            alt=""
+                            class="profile__img">
+                    </div>
+                    <div class="contact__socialmedia">
+                        <ul class="contact__links">
+                            <li>
+                                <a href="">
+                                    <span class="icon">
+                                        <i class="uil uil-linkedin-alt"></i>
+                                    </span>
+                                    <span class="contact__icon-text">Linkedin</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <span class="icon">
+                                        <i class="uil uil-envelope"></i>
+                                    </span>
+                                    <span class="contact__icon-text">Email</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <span class="icon">
+                                        <i class="uil uil-instagram"></i>
+                                    </span>
+                                    <span class="contact__icon-text">Instagram</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <span class="icon">
+                                        <i class="uil uil-behance-alt"></i>
+                                    </span>
+                                    <span class="contact__icon-text">Behance</span>
+                                </a>
+                            </li>
+                            
+                        </ul>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+    </main>
+
+    <script>
+        const contact__toggle = document.querySelector('.contact__toggle');
+        const contact__sidebar = document.querySelector('.contact__sidebar');
+
+        contact__toggle.onclick = function() {
+            contact__sidebar.classList.toggle('contact__active')
+        }
+    </script>
+</body>
+</html>
