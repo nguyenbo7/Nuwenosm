@@ -1,0 +1,316 @@
+/*========================= GOOGLE FONTS =========================*/
+@import url("https://fonts.googleapis.com/css2?family=Pattaya&family=Poppins:wght@300;400;500;600&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100;200;300;400;500;700&display=swap');
+/*========================= VARIABLES CSS =========================*/
+:root {
+  /*____________________ Colors ____________________*/
+  --clr-dark: #101415;
+  --clr-gray: #8d8d8d;
+  --clr-light: #d4cfc2;
+  --clr-theme: #0038FF;
+  --clr-border: #bababa;
+  --clr-hover: orangered;
+
+  /*____________________ Font and typography ____________________*/
+  --font-family-text1: 'Lexend', sans-serif;
+  --font-family-text2: "Poppins", sans-serif;
+
+  /*____________________ Font Size ____________________*/
+  --fs-title: 1.75rem;
+  --fs-logo: 1.5rem;
+
+  --fs-huge: 7rem;
+  --fs-larger: 2.5rem;
+  --fs-large: 2rem;
+  --fs-medium: 1.25rem;
+  --fs-small: 1rem;
+  --fs-smaller: 0.75rem;
+
+  /*____________________ Font Weight ____________________*/
+  --fw-thinner: 100;
+  --fw-thin: 200;
+  --fw-medium: 300;
+  --fw-semi-bold: 400;
+  --fw-bold: 500;
+
+  /*____________________ Margin Bottom ____________________*/
+  --mb-0-25: 0.25rem;
+  --mb-0-5: 0.5rem;
+  --mb-0-75: 0.75rem;
+  --mb-1: 1rem;
+  --mb-1-5: 1.5rem;
+  --mb-2: 2rem;
+  --mb-2-5: 2.5rem;
+  --mb-3: 3rem;
+
+  /*____________________ z index ____________________*/
+  --z-behind: -10;
+  --z-tooltip: 10;
+  --z-fixed: 20;
+  --z-modal: 30;
+}
+
+/*____________________ Title and Text ____________________*/
+.title__big {
+    font-size: 7rem;
+    font-weight: 300;
+}
+.title__blue {
+    color: #0038FF;
+    font-size: 3rem;
+    font-weight: 600;
+    letter-spacing: 0.25em;
+}
+.title__medium {
+    font-size: 2.25rem;
+}
+.title__small {
+    font-size: 1.25rem;
+    font-weight: 400;
+}
+.text__subtitle {
+    color: #97A5D9;
+    font-size: 1.25rem;
+    font-weight: 100;
+    margin-bottom: 5px;
+}
+/*____________________ Button ____________________*/
+/* .button {
+  display: inline-block;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--clr-light);
+  font-weight: var(--fw-medium);
+  color: var(--clr-light);
+  font-size: var(--fs-small);
+}
+.button:hover {
+  color: red;
+  background-color: white;
+} */
+/*========================= BASE =========================*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-size: 1.25rem;
+  font-weight: 200;
+  font-family: var(--font-family-text1);
+  color: var(--clr-dark);
+  letter-spacing: 0.2em;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: var(--clr-light);
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/*========================= NAVIGATION BAR =========================*/
+nav {
+    height: 3.5rem;
+    position: fixed;
+    background-color: #0038FF;
+    margin-top: 50px;
+    margin-left: 80px;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.nav__links {
+    width: 600px;
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.nav__links li a {
+    font-size: 1.5rem;
+    font-weight: 200;
+}
+.nav__links li a:hover:not(.active) {
+    background-color: #111;
+}
+/* .active {
+    background-color: #00d0ff;
+} */
+.hor__line {
+    width: 180px;
+    height: 2px;
+    background-color: black;
+}
+/*========================= CONTACT SECTION =========================*/
+.contact__sidebar {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 10;
+    overflow: hidden;
+
+    width: 140px;
+    min-height: 280px;
+    letter-spacing: 0.1em;
+    background-color: white;
+    box-shadow: -20px 20px 50px rgba(0,0,0,0.15);
+    transition: 0.5s;
+
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+}
+.contact__sidebar.contact__active {
+    width: 450px;
+}
+.contact__sidebar .contact__toggle {
+    position: relative;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    cursor: pointer;
+}
+.contact__sidebar .contact__toggle::before {
+    content: '';
+    position: absolute;
+    width: 35px;
+    height: 3px;
+    background: #0038FF;
+    transform: translateY(-5px);
+    transition: 0.5s;
+}
+.contact__sidebar .contact__toggle::after {
+    content: '';
+    position: absolute;
+    width: 35px;
+    height: 3px;
+    background: #0038FF;
+    transform: translateY(5px);
+    transition: 0.5s;
+}
+
+.contact__sidebar.contact__active .contact__toggle::before {
+    transform: translateY(0px) rotate(45deg);
+}
+.contact__sidebar.contact__active .contact__toggle::after {
+    transform: translateY(0px) rotate(-45deg);
+}
+.contact__info {
+    display: flex;
+    align-items: center;
+}
+.contact__img {
+    width: 180px;
+    height: 180px;
+}
+
+.profile__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    
+}
+.contact__sidebar .contact__links {
+    position: relative;
+    width: 100%;
+    margin: 10px;
+    transition: 0.5s;
+}
+.contact__sidebar.contact__active .contact__links {
+    padding: 10px 30px;
+}
+.contact__sidebar .contact__links li a {
+    position: relative;
+    display: flex;
+    color: var(--clr-dark);
+}
+.contact__sidebar .contact__links li a:hover {
+    background-color: #0038FF;
+    color: #fff;
+}
+
+.contact__sidebar .contact__links li a .icon {
+    position: relative;
+    min-width: 60px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+}
+
+.contact__sidebar .contact__links li a .contact__icon-text {
+    position: relative;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.75rem;
+}
+
+/*========================= HOME SECTION =========================*/
+.home__section {
+    height: 100vh;
+}
+.home__top {
+    height: 70vh;
+    color: var(--clr-light);
+    background-color: var(--clr-dark);
+    padding-left: 80px;
+
+    display: grid;
+    grid-template-columns: 45% 55%;
+}
+.home__info {
+    margin-bottom: 40px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    /* background-color: red; */
+}
+.home__info .title__medium {
+    margin: 10px 0 20px 0;
+}
+
+.img__cover {
+    height: 55vh;
+    width: 55vw;
+    float: right;
+    object-fit: cover;
+}
+
+.home__bot {
+    height: 25vh;
+    width: 100%;
+    padding-top: 50px;
+    padding-left: 80px;
+    display: flex;
+}
+
+.title__arrow {
+    margin-top: 40px;
+    width: 400px;
+}
+.info__work {
+    color: var(--clr-dark);
+    width: 55%;
+    margin-left: 80px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+}
+
